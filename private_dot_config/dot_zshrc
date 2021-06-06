@@ -9,4 +9,6 @@ zstyle :compinstall filename '/home/karim/.zshrc'
 eval "$(starship init zsh)"
 autoload -Uz compinit
 compinit
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/aliases/aliases.zsh
 # End of lines added by compinstall
