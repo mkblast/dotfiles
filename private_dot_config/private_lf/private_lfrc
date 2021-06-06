@@ -128,6 +128,7 @@ map gd cd ~/Downloads
 map gv. cd ~/Videos
 map gva cd ~/Videos/anime
 
+map gca cd ~/.config/alacritty
 map gcc cd ~/.config
 map gcn cd ~/.config/nvim
 map gcl cd ~/.config/lf
