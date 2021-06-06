@@ -1,5 +1,4 @@
 set incsearch
-
 set previewer ~/.config/lf/pv.sh
 set drawbox true
 set icons true
