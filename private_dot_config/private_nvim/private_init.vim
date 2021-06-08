@@ -46,6 +46,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 call plug#end()
 "Nooooord
 colorscheme nord
