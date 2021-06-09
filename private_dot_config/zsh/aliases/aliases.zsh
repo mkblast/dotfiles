@@ -10,13 +10,9 @@ alias more=less
 
 # Pacman-alias
 alias p='sudo pacman'
-alias pi='sudo pacman -S'
-alias pu='sudo pacman -Syu'
-alias pr='sudo pacman -Rs'
 
 # Paru-alias
 alias y='paru'
-alias yr='paru -Rs'
 
 # Apps-alias
 alias v='nvim'
