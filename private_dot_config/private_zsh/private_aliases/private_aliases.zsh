@@ -26,4 +26,3 @@ alias pvc='sudo protonvpn c'
 alias pvd='sudo protonvpn d'
 alias pvs='sudo protonvpn s'
 alias pvr='sudo protonvpn reconnect'
-
