@@ -16,6 +16,7 @@ set expandtab
 set smarttab
 set smartindent
 set smartcase
+
 let mapleader = " "
 
 "Let List Some Plugins Here
@@ -31,16 +32,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'mbbill/undotree'
 call plug#end()
 
 "Nooooord
 colorscheme nord
 let g:airline_theme='nord'
 
-"Lf Plugin Options
-let g:lf_width = 120
-let g:lf_height = 35
-let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 
 "Airline
 function! MyLineNumber()
@@ -58,10 +56,10 @@ let g:gitgutter_map_keys = 0
 "Some Maps
 
 "Windows
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <c-h> :wincmd h<CR>
+nnoremap <c-j> :wincmd j<CR>
+nnoremap <c-k> :wincmd k<CR>
+nnoremap <c-l> :wincmd l<CR>
 
 "Tabs 
 nnoremap <leader>t :tabnew<CR>
@@ -71,3 +69,15 @@ nnoremap <leader>N :tabprevious<CR>
 
 "For git
 nmap <leader>gs :G<CR>
+
+"Undotree
+nnoremap <leader>u :UndotreeToggle<CR>
+
+"Lf Plugin Options
+let g:lf_width = 120
+let g:lf_height = 35
+let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
+let g:lf_map_keys = 0
+nmap <leader>f :LfNewTab<CR>
+
+
