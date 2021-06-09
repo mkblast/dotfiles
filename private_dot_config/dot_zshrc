@@ -78,4 +78,5 @@ bindkey '^e' edit-command-line
 
 # Extras
 source ~/.config/zsh/aliases/aliases.zsh
-source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# GO git fast-syntax-highlighting plugin
+source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
