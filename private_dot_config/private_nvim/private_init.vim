@@ -105,12 +105,18 @@ nnoremap <c-h> :wincmd h<CR>
 nnoremap <c-j> :wincmd j<CR>
 nnoremap <c-k> :wincmd k<CR>
 nnoremap <c-l> :wincmd l<CR>
-nnoremap <leader>j <c-^>
-" Tabs 
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>c :tabclose<CR>
-nnoremap <leader>n :tabnext<CR>
-nnoremap <leader>N :tabprevious<CR>
+" Buffers
+nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bn :bnext<CR>
+nnoremap <leader>bN :bprevious<CR>
+nnoremap <leader>bj <c-^>
+
+" Windows
+nnoremap <leader>ws :split<CR>
+nnoremap <leader>wv :vsplit<CR>
+nnoremap <leader>wf :split<CR>
+nnoremap <leader>wc :close<CR>
+nnoremap <leader>wh :hide<CR>
 
 " For git
 nmap <leader>gs :G<CR>
