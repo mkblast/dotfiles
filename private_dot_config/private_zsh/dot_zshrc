@@ -69,6 +69,7 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
 eval "$(starship init zsh)"
 
 # Edit line in vim with ctrl-e:
