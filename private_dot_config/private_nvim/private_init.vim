@@ -107,9 +107,9 @@ nnoremap <c-k> :wincmd k<CR>
 nnoremap <c-l> :wincmd l<CR>
 " Buffers
 nnoremap <leader>bd :bdelete<CR>
-nnoremap <leader>bn :bnext<CR>
-nnoremap <leader>bN :bprevious<CR>
 nnoremap <leader>bj <c-^>
+nnoremap <TAB> :bnext<CR>
+nnoremap <S><TAB> :bprevious<CR>
 
 " Windows
 nnoremap <leader>ws :split<CR>
