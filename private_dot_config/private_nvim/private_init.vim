@@ -64,19 +64,18 @@ let g:gitgutter_map_keys = 0
 
 " Lsp
 function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gs <plug>(lsp-document-symbol-search)
-    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
-    nmap <buffer> K <plug>(lsp-hover)
+    nmap <buffer> <leader>ld <plug>(lsp-definition)
+    nmap <buffer> <leader>ls <plug>(lsp-document-symbol-search)
+    nmap <buffer> <leader>lS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> <leader>lr <plug>(lsp-references)
+    nmap <buffer> <leader>li <plug>(lsp-implementation)
+    nmap <buffer> <leader>lt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>ln <plug>(lsp-rename)
+    nmap <buffer> <leader>l<S-TAB> <plug>(lsp-previous-diagnostic)
+    nmap <buffer> <leader>l<TAB> <plug>(lsp-next-diagnostic)
+    nmap <buffer> <leader>K <plug>(lsp-hover)
     inoremap <buffer> <expr><c-f> lsp#scroll(+4)
     inoremap <buffer> <expr><c-d> lsp#scroll(-4)
 
@@ -105,6 +104,7 @@ nnoremap <c-h> :wincmd h<CR>
 nnoremap <c-j> :wincmd j<CR>
 nnoremap <c-k> :wincmd k<CR>
 nnoremap <c-l> :wincmd l<CR>
+
 " Buffers
 nnoremap <leader>bd :bdelete<CR>
 nnoremap <leader>bj <c-^>
@@ -116,6 +116,7 @@ nnoremap <leader>ws :split<CR>
 nnoremap <leader>wv :vsplit<CR>
 nnoremap <leader>wf :split<CR>
 nnoremap <leader>wc :close<CR>
+nnoremap <leader>wo :on<CR>
 nnoremap <leader>wh :hide<CR>
 
 " For git
