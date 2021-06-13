@@ -69,7 +69,6 @@ def init_keys():
         Key([mod, "shift"], "t", lazy.spawn("thunderbird")),
         Key([mod, "shift"], "b", lazy.spawn("thunar")),
         Key([mod], "d", lazy.spawn("rofi -show run")),
-        Key([mod, "shift"], "p", lazy.spawn("./Scripts/pdfs.sh")),
     
         # Backlight control:
         Key([mod], "Down", lazy.spawn("light -U 5")),
@@ -85,6 +84,7 @@ def init_keys():
 
         ]
     return keys
+
 
 keys = init_keys()
 
@@ -150,7 +150,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='Jetbrain Mono',
+    font='Ubuntu',
     fontsize=12,
     padding=2,
     background="2e3440",
@@ -303,3 +303,9 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 
 wmname = "LG3D"
+
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.call([home])
