@@ -19,6 +19,7 @@ from typing import List  # noqa: F401
 # Set Default modkey:
 mod = "mod4"
 
+
 def init_keys():
     keys = [
 
@@ -55,6 +56,8 @@ def init_keys():
     
         # Restart qtile in place:
         Key([mod, "control"], "r", lazy.restart()),
+        # Kill qtile
+        Key([mod, "control"], "q", lazy.shutdown()),
     
         # Open a run prompt:
         Key([mod], "r", lazy.spawncmd()),
@@ -77,7 +80,9 @@ def init_keys():
         Key([mod], "Right", lazy.spawn("amixer -c 0 -q set Master 2dB+")),
     
         # Change keyboard layout:
-        Key([mod], "space", lazy.spawn("./Scripts/kbdlayout.sh")),
+        Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), 
+                desc="Next keyboard layout."),
+
         ]
     return keys
 
@@ -85,41 +90,39 @@ keys = init_keys()
 
 groups = [
     Group(
-        "1",
+        "ampersand",
         label=""
     ),
     Group(
-        "2",
+        "eacute",
         matches=[Match(wm_class=["firefox"])],
         label=""
     ),
     Group(
-        "3",
+        "quotedbl",
         matches=[Match(wm_class=["Emacs"])],
         label=""
     ),
     Group(
-        "4",
+        "apostrophe",
         matches=[Match(wm_class=["libreoffice"])],
         label=""
     ),
     Group(
-        "5",
+        "parenleft",
         matches=[Match(wm_class=["Thunderbird"])],
         label=""
     ),
     Group(
-      "6",
+      "section",
         matches=[Match(wm_class=["code-oss"])],
         label=""
     ),
     Group(
-        "7",
+        "egrave",
         label=""
     ),
     ]
-
-
 
 
 for i in groups:
@@ -133,23 +136,23 @@ for i in groups:
 
 layouts = [
     layout.MonadTall(
-        border_focus = "5e81ac",
-        border_normal = "b48ead",
-        border_width = 3,
+        border_focus = "ebcb8b",
+        border_normal = "5e81ac",
+        border_width = 2,
         margin = 5,
     ),
     layout.MonadWide(
-        border_focus = "5e81ac",
-        border_normal = "b48ead",
-        border_width = 3,
+        border_focus = "ebcb8b",
+        border_normal = "5e81ac",
+        border_width = 2,
         margin = 5,
     ),
 ]
 
 widget_defaults = dict(
-    font='Cascadia Code',
-    fontsize=14,
-    padding=4,
+    font='Jetbrain Mono',
+    fontsize=12,
+    padding=2,
     background="2e3440",
     foreground="5e81ac",
 )
@@ -158,8 +161,8 @@ extension_defaults = widget_defaults.copy()
 def get_bar():
     return bar.Bar([
        widget.GroupBox(
-           active = "5e81ac",
-           inactive = "b48ead",
+           active = "ebcb8b",
+           inactive = "5e81ac",
            this_current_screen_border = "bf616a",
            highlight_method = "line",
            highlight_color=["2e3440", "2e3440"],
@@ -172,7 +175,7 @@ def get_bar():
            text='|',
            foreground="bf6a6a"
        ),
-       #widget.TaskList(
+       # widget.TaskList(
        #    foreground = "2e3440",
        #    border = "5e81ac",
        #    fontsize = 11,
@@ -181,8 +184,8 @@ def get_bar():
        #    max_title_width=100,
        #    title_width_method="uniform",
        #    icon_size = 13,
-       #    rounded=False,
-       #),
+       #     rounded=False,
+       # ),
        widget.Spacer(bar.STRETCH),
        widget.Systray(
        ),
@@ -196,22 +199,23 @@ def get_bar():
        ),
        widget.KeyboardLayout(
            foreground="8fbcbb",
+           configured_keyboards=["fr", "ara"],
        ),
        widget.TextBox(
            text='|',
            foreground="5e81ac",
        ),
-       widget.TextBox(
-           text='',
-           foreground="5e81ac",
-       ),
-       widget.Battery(
-           format = '{percent:2.0%}'
-       ),
-       widget.TextBox(
-           text='|',
-           foreground="ebcb8b",
-       ),
+       # widget.TextBox(
+       #     text='',
+       #     foreground="5e81ac",
+       # ),
+       # widget.Battery(
+       #     format = '{percent:2.0%}'
+       # ),
+       # widget.TextBox(
+       #     text='|',
+       #     foreground="ebcb8b",
+       # ),
        widget.TextBox(
            text='',
            foreground="ebcb8b",
@@ -227,10 +231,10 @@ def get_bar():
            text='',
            foreground="88c0d0",
        ),
-       widget.Backlight(
-           foreground="88c0d0",
-           backlight_name="intel_backlight",
-       ),
+       # widget.Backlight(
+       #     foreground="88c0d0",
+       #     backlight_name="intel_backlight",
+       # ),
        widget.TextBox(
            text='|',
            foreground="a3be8c",
@@ -247,15 +251,15 @@ def get_bar():
            text='|',
            foreground="bf6a6a",
        ),
-       widget.TextBox(
-           text='',
-           foreground="bf6a6a",
-       ),
-       widget.Wlan(
-           foreground="bf6a6a",
-           interface="wlp3s0",
-           format="{essid}",
-       ),
+       # widget.TextBox(
+       #     text='',
+       #     foreground="bf6a6a",
+       # ),
+       # widget.Wlan(
+       #     foreground="bf6a6a",
+       #     interface="wlp3s0",
+       #     format="{essid}",
+       # ),
     ], 26, background="2e3440")
 
 
