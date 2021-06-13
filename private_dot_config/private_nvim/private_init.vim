@@ -72,6 +72,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>lr <plug>(lsp-references)
     nmap <buffer> <leader>li <plug>(lsp-implementation)
     nmap <buffer> <leader>lt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>lpd <plug>(lsp-peek-definition)
     nmap <buffer> <leader>ln <plug>(lsp-rename)
     nmap <buffer> <leader>l<S-TAB> <plug>(lsp-previous-diagnostic)
     nmap <buffer> <leader>l<TAB> <plug>(lsp-next-diagnostic)
