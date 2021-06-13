@@ -68,7 +68,7 @@ def init_keys():
         Key([mod, "shift"], "e", lazy.spawn("emacs")),
         Key([mod, "shift"], "t", lazy.spawn("thunderbird")),
         Key([mod, "shift"], "b", lazy.spawn("thunar")),
-        Key([mod], "d", lazy.spawn("rofi -show run")),
+        Key([mod], "d", lazy.spawn("rofi -show drun ")),
     
         # Backlight control:
         Key([mod], "Down", lazy.spawn("light -U 5")),
@@ -312,17 +312,27 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'confirmreset'},  # gitk
     {'wmclass': 'makebranch'},  # gitk
     {'wmclass': 'maketag'},  # gitk
+    {'wname': 'Open File'},
     {'wname': 'branchdialog'},  # gitk
     {'wname': 'pinentry'},  # GPG key password entry
     {'wmclass': 'ssh-askpass'},  # ssh-askpass
-])
+], fullscreen_border_width = 0, border_focus = "ebcb8b", border_normal = "5e81ac")
+
+
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 
-wmname = "LG3D"
+
+@hook.subscribe.startup
+def start_always():
+    # Set the cursor to something sane in X
+    subprocess.Popen(['xsetroot', '-cursor_name', 'left_ptr'])
 
 
 @hook.subscribe.startup_once
 def autostart():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.call([home])
+    home = os.path.expanduser('~')
+    subprocess.call([home + '/.config/qtile/autostart.sh'])
+
+
+wmname = "LG3D"
