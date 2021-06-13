@@ -1,5 +1,5 @@
-#!/usr/bin/env bash 
+#!/bin/sh
 
-nitrogen --restore &
-lxsession &
-nm-applet &
+run nitrogen --restore &
+run lxsession &
+run nm-applet &

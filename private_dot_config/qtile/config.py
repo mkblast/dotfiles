@@ -52,7 +52,7 @@ def init_keys():
         # Change Layout:
         Key([mod], "Tab", lazy.next_layout()),
         # Close focused window:
-        Key([mod, "shift"], "q", lazy.window.kill()),
+        Key([mod], "q", lazy.window.kill()),
     
         # Restart qtile in place:
         Key([mod, "control"], "r", lazy.restart()),
@@ -152,7 +152,7 @@ layouts = [
 widget_defaults = dict(
     font='Ubuntu',
     fontsize=12,
-    padding=2,
+    padding=4,
     background="2e3440",
     foreground="5e81ac",
 )
@@ -162,18 +162,18 @@ def get_bar():
     return bar.Bar([
        widget.GroupBox(
            active = "ebcb8b",
-           inactive = "5e81ac",
+           inactive = "88c0d0",
            this_current_screen_border = "bf616a",
            highlight_method = "line",
            highlight_color=["2e3440", "2e3440"],
            center_aligned=True,
        ),
-       widget.Prompt(
-           prompt='Run:',
-       ),
        widget.TextBox(
            text='|',
            foreground="bf6a6a"
+       ),
+       widget.Prompt(
+           prompt='Run:',
        ),
        # widget.TaskList(
        #    foreground = "2e3440",
@@ -185,14 +185,23 @@ def get_bar():
        #    title_width_method="uniform",
        #    icon_size = 13,
        #     rounded=False,
-       # ),
+       # ), 
+
        widget.Spacer(bar.STRETCH),
-       widget.Systray(
+             widget.TextBox(
+           text='|',
+           foreground="8fbcbb",
        ),
+
+       widget.CurrentLayout(
+            foreground='a3be8c',
+       ),
+
        widget.TextBox(
            text='|',
            foreground="8fbcbb",
        ),
+
        widget.TextBox(
            text='',
            foreground="8fbcbb",
@@ -216,10 +225,10 @@ def get_bar():
        #     text='|',
        #     foreground="ebcb8b",
        # ),
-       widget.TextBox(
-           text='',
-           foreground="ebcb8b",
-       ),
+       # widget.TextBox(
+       #     text='',
+       #     foreground="ebcb8b",
+       # ),
        widget.Volume(
            foreground="ebcb8b",
        ),
@@ -244,7 +253,7 @@ def get_bar():
            foreground="a3be8c",
        ),
        widget.Clock(
-           format='%a %I:%M',
+           format='%Y-%m-%d %a %I:%M %p',
            foreground = "a3be8c",
        ),
        widget.TextBox(
@@ -260,6 +269,14 @@ def get_bar():
        #     interface="wlp3s0",
        #     format="{essid}",
        # ),
+       widget.Systray(
+       ),
+
+       widget.TextBox(
+           text='',
+           foreground="ebcb8b",
+       ),
+
     ], 26, background="2e3440")
 
 
