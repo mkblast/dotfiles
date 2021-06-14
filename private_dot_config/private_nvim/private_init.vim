@@ -34,10 +34,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
@@ -62,43 +58,8 @@ let g:airline_section_z = airline#section#create(['%3p%%: ', 'linenr', ':%3v'])
 let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
 
-" Lsp
-function! s:on_lsp_buffer_enabled() abort
-    setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> <leader>ld <plug>(lsp-definition)
-    nmap <buffer> <leader>ls <plug>(lsp-document-symbol-search)
-    nmap <buffer> <leader>lS <plug>(lsp-workspace-symbol-search)
-    nmap <buffer> <leader>lr <plug>(lsp-references)
-    nmap <buffer> <leader>li <plug>(lsp-implementation)
-    nmap <buffer> <leader>lt <plug>(lsp-type-definition)
-    nmap <buffer> <leader>lpd <plug>(lsp-peek-definition)
-    nmap <buffer> <leader>ln <plug>(lsp-rename)
-    nmap <buffer> <leader>l<S-TAB> <plug>(lsp-previous-diagnostic)
-    nmap <buffer> <leader>l<TAB> <plug>(lsp-next-diagnostic)
-    nmap <buffer> <leader>K <plug>(lsp-hover)
-    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
-    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
-
-    let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
-    
-    " refer to doc to add more commands
-endfunction
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
 
 "Some Maps
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
-
-" Insert mode to Normal mode
-inoremap <DEL> <ESC> 
 
 " Windows
 nnoremap <c-h> :wincmd h<CR>
