@@ -65,9 +65,7 @@ def init_keys():
         # Applications/Scripts Shortcuts:
         Key([mod], "Return", lazy.spawn("alacritty")),
         Key([mod, "shift"], "f", lazy.spawn("firefox")),
-        Key([mod, "shift"], "e", lazy.spawn("emacs")),
-        Key([mod, "shift"], "t", lazy.spawn("thunderbird")),
-        Key([mod, "shift"], "b", lazy.spawn("thunar")),
+        Key([mod, "shift"], "b", lazy.spawn("pcmanfm")),
         Key([mod], "d", lazy.spawn("rofi -show drun ")),
     
         # Backlight control:
@@ -79,8 +77,7 @@ def init_keys():
         Key([mod], "Right", lazy.spawn("amixer -c 0 -q set Master 2dB+")),
     
         # Change keyboard layout:
-        Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(), 
-                desc="Next keyboard layout."),
+        Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard())
 
         ]
     return keys
