@@ -307,6 +307,7 @@ main = None
 follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
+# Use xprop to get the informations
 floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'confirm'},
     {'wmclass': 'dialog'},
@@ -320,6 +321,7 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'makebranch'},  # gitk
     {'wmclass': 'maketag'},  # gitk
     {'wname': 'Open File'},
+    {'wname': 'Authentication'},
     {'wname': 'branchdialog'},  # gitk
     {'wname': 'pinentry'},  # GPG key password entry
     {'wmclass': 'ssh-askpass'},  # ssh-askpass
