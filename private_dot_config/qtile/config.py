@@ -60,7 +60,7 @@ def init_keys():
         Key([mod, "control"], "q", lazy.shutdown()),
     
         # Open a run prompt:
-        Key([mod], "r", lazy.spawncmd()),
+        # Key([mod], "r", lazy.spawncmd()),
     
         # Applications/Scripts Shortcuts:
         Key([mod], "Return", lazy.spawn("alacritty")),
@@ -172,9 +172,9 @@ def get_bar():
            text='|',
            foreground="bf6a6a"
        ),
-       widget.Prompt(
-           prompt='Run:',
-       ),
+       # widget.Prompt(
+       #     prompt='Run:',
+       # ),
        # widget.TaskList(
        #    foreground = "2e3440",
        #    border = "5e81ac",
@@ -209,6 +209,10 @@ def get_bar():
        widget.KeyboardLayout(
            foreground="8fbcbb",
            configured_keyboards=["fr", "ara"],
+           display_map={
+               'fr': 'FR',
+               'ara': 'AR'
+               },
        ),
        widget.TextBox(
            text='|',
@@ -229,17 +233,23 @@ def get_bar():
        #     text='',
        #     foreground="ebcb8b",
        # ),
+
+       widget.TextBox(
+           text='Vol:',
+           foreground="ebcb8b",
+       ),
        widget.Volume(
            foreground="ebcb8b",
        ),
-       widget.TextBox(
-           text='|',
-           foreground="88c0d0",
-       ),
-       widget.TextBox(
-           text='',
-           foreground="88c0d0",
-       ),
+       # widget.TextBox(
+       #     text='|',
+       #     foreground="88c0d0",
+       # ),
+       # widget.TextBox(
+       #     text='',
+       #     foreground="88c0d0",
+       # ),
+
        # widget.Backlight(
        #     foreground="88c0d0",
        #     backlight_name="intel_backlight",
@@ -248,10 +258,7 @@ def get_bar():
            text='|',
            foreground="a3be8c",
        ),
-       widget.TextBox(
-           text='',
-           foreground="a3be8c",
-       ),
+
        widget.Clock(
            format='%Y-%m-%d %a %I:%M %p',
            foreground = "a3be8c",
