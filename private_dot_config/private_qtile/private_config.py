@@ -332,12 +332,6 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 
 
-@hook.subscribe.startup
-def start_always():
-    # Set the cursor to something sane in X
-    subprocess.Popen(['xsetroot', '-cursor_name', 'left_ptr'])
-
-
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~')
