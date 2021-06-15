@@ -48,3 +48,4 @@ bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=
 
 ###---Keyboard---###
 setxkbmap -option grp:alt_shift_toggle fr,ara &
+setxkbmap -option caps:swapescape
