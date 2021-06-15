@@ -83,9 +83,9 @@ label-focused = %name%
 label-focused-background = ${colors.background-wm}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 1
-
 label-occupied = %name%
 label-occupied-padding = 1
+label-occupied-underline = ${colors.alert}
 
 label-urgent = %name%!
 label-urgent-background = ${colors.alert}
