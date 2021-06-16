@@ -112,7 +112,7 @@ super + {Left,Down,Up,Right}
 # super + ctrl + shift + space
 # 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-# APPLICATION KEYBINDINGS 
+# System contol
 
 #Volume Control
 XF86AudioLowerVolume
@@ -124,7 +124,15 @@ XF86AudioRaiseVolume
 XF86AudioMute
         amixer set Master toggle
 
-# terminal emulator
+# Brightness control
+
+XF86MonBrightnessDown
+    xbacklight -dec 10%
+
+XF86MonBrightnessUp
+    xbacklight -inc 10%
+
+# APPLICATION KEYBINDINGS 
 super + Return
 	alacritty
 
