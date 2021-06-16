@@ -125,7 +125,6 @@ XF86AudioMute
         amixer set Master toggle
 
 # Brightness control
-
 XF86MonBrightnessDown
     xbacklight -dec 10%
 
