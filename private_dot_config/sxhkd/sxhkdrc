@@ -113,10 +113,16 @@ super + {Left,Down,Up,Right}
 # 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 # APPLICATION KEYBINDINGS 
-super + Up
-    amixer -c 0 -q set Master 2dB+
-super + Down
-    amixer -c 0 -q set Master 2dB-
+
+#Volume Control
+XF86AudioLowerVolume
+	amixer set Master 5%-
+
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+
+XF86AudioMute
+        amixer set Master toggle
 
 # terminal emulator
 super + Return
