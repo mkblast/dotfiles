@@ -138,6 +138,8 @@ super + Return
 super + d
     rofi -show drun -sorting-method fzf -sort
 
+super + shift + d
+    rofi -show window -sorting-method fzf -sort
 super + e
     alacritty -e lf
 
