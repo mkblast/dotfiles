@@ -104,24 +104,24 @@ label-separator = |
 type = custom/script
 exec = date '+%d/%m/%Y %H:%M'
 click-left = thunderbird &
-label = 📅 %output%
+label = ▣ %output%
 interval = 30
 
 [module/volume]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
-label-muted = 🔇 muted
-label-muted-foreground = ${colors.foregroundr
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+label-muted = muted
+label-muted-foreground = ${colors.foregroundr)
+ramp-volume-0 = ▁
+ramp-volume-1 = ▅
+ramp-volume-2 = █
 click-right = pavucontrol
 
 [module/xkeyboard]
 type = internal/xkeyboard
 label-layout = %icon%
-layout-icon-0 = fr;FR
-layout-icon-1 = ara;AR
+layout-icon-0 = fr;▣ FR
+layout-icon-1 = ara;▣ AR
 ; List of indicators to ignore
 blacklist-0 = num lock
 blacklist-1 = scroll lock
