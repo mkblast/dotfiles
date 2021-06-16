@@ -104,7 +104,7 @@ label-separator = |
 type = custom/script
 exec = date '+%d/%m/%Y %H:%M'
 click-left = thunderbird &
-label = "%output%"
+label = 📅 %output%
 interval = 30
 
 [module/volume]
