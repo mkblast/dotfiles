@@ -6,7 +6,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 nm-applet &
 picom  &
 lxsession &
-$HOME/.config/bspwm/launch.sh
+$HOME/.config/bspwm/launch.sh &
+setxkbmap -option caps:swapescape &
+setxkbmap -option grp:alt_shift_toggle fr,ara &
 
 bspc monitor VGA1 -d 1 2 3 4 5 6 7 8 9
 
@@ -44,8 +46,3 @@ bspc rule -a mpv state=tiled
 bspc rule -a Zathura state=tiled
 bspc rule -a Screenkey manage=off
 bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=above
-
-
-###---Keyboard---###
-setxkbmap -option grp:alt_shift_toggle fr,ara &
-setxkbmap -option caps:swapescape
