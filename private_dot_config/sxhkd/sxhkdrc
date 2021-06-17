@@ -43,6 +43,8 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+super + ctrl + {j, k}
+    bspc node -f {next, prev}.local
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -75,7 +77,7 @@ super + ctrl + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,ex
     id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
 
 # Expand/contract a window by moving one of its side outward/inward
-super +  z : {h,j,k,l}
+super +  @space : {h,j,k,l}
     STEP=20; SELECTION={1,2,3,4}; \
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
     bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
@@ -142,6 +144,3 @@ super + shift + d
     rofi -show window -sorting-method fzf -sort
 super + e
     alacritty -e lf
-
-super + v
-    alacritty -e nvim
