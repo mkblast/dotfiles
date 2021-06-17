@@ -53,7 +53,7 @@ font-2 = FontAwesome5Free:style=Regular:size=10
 font-3 = FontAwesome5Brands:style=Regular:size=10
 
 modules-left = bspwm title
-modules-right = xkeyboard volume memory cpu time
+modules-right = xkeyboard volume memory cpu date
 
 tray-position = right
 tray-padding = 1
@@ -100,12 +100,12 @@ scroll-down = bspwm-deskprev
 ; Separator in between workspaces
 label-separator = |
 
-[module/time]
-type = custom/script
-exec = date '+%d/%m/%Y %H:%M'
-click-left = thunderbird &
-label =  %output%
-interval = 30
+[module/date]
+type = internal/date
+label = %date% %time%
+interval = 10.0
+date = %A, %d %B %Y
+time = %H:%M
 
 [module/volume]
 type = internal/pulseaudio
