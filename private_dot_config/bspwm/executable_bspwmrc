@@ -4,7 +4,7 @@ bspc rule -r "*"
 ###---Autostart---###
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/bspwm/caps.sh &
-setxkbmap -option grp:alt_shift_toggle il,us &
+setxkbmap -option grp:alt_shift_toggle fr,ara &
 nm-applet &
 nitrogen --restore &
 picom  &
