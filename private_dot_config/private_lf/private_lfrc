@@ -143,6 +143,8 @@ map gd cd ~/Downloads
 map gv. cd ~/Videos
 map gva cd ~/Videos/anime
 
+map gm cd /run/media/karim
+
 map gca cd ~/.config/alacritty
 map gcc cd ~/.config
 map gcn cd ~/.config/nvim
