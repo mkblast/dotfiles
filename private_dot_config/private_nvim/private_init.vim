@@ -4,7 +4,7 @@ set clipboard=unnamedplus
 set mouse=nv
 set noshowmode
 set noto
-" set nowrap
+set nowrap
 set termguicolors
 set nohlsearch
 set nu rnu
@@ -17,7 +17,12 @@ set expandtab
 set smarttab
 set smartindent
 set smartcase
+set ignorecase
 set formatoptions-=cro 
+set updatetime=50
+" Cursor line
+set cursorline
+set cursorcolumn
 
 let mapleader = " "
 
@@ -38,9 +43,11 @@ Plug 'tpope/vim-commentary'
 call plug#end()
 
 " Nooooord
+" colorscheme nord
 colorscheme nord
 let g:airline_theme='nord'
-
+" Transparency
+hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
 
