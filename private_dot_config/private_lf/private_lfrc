@@ -136,7 +136,7 @@ map cm chezmoi
 
 # Movement
 map gtr cd ~/.local/share/Trash/files
-map gus cd /run/media/
+map gm cd /run/media/
 
 map gd cd ~/Downloads
 
@@ -145,22 +145,20 @@ map gd cd ~/Documents
 map gv. cd ~/Videos
 map gva cd ~/Videos/anime
 
-map gm cd /run/media/karim
-
-map gca cd ~/.config/alacritty
 map gcc cd ~/.config
+map gca cd ~/.config/alacritty
 map gcn cd ~/.config/nvim
 map gcl cd ~/.config/lf
 map gcb cd ~/.config/bspwm
 map gcs cd ~/.config/sxhkd
 map gcp cd ~/.config/polybar
+map gcq cd ~/.config/qtile
 
-map gC cd ~/Files/code
+map gf cd ~/Files
+map gfc cd ~/Files/code
+
 map gl cd ~/.local
+
 map ge cd /etc
 map gU. cd /usr
 map gUs cd /usr/share
-
-map \;j cd ~
-
-
