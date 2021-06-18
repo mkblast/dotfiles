@@ -138,6 +138,10 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 # Type: Bool
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
+# Start page
+c.url.start_pages = ['about:blank']
+c.url.default_page = 'about:blank'
+
 # Bindings for normal mode
 config.bind(',M', 'spawn mpv {url}')
 config.bind(',m', 'hint links spawn mpv {hint-url}')
