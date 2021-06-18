@@ -146,6 +146,11 @@ config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
 config.bind('t', 'set-cmd-text -s :open -t')
 
+# Fix scroling
+config.bind('h', 'scroll-px -30 0')
+config.bind('j', 'scroll-px 0 30')
+config.bind('k', 'scroll-px 0 -30')
+config.bind('l', 'scroll-px 30 0')
 
 
 
