@@ -2,6 +2,7 @@
 
 ###---Autostart---###
 pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep bspswallow || bspswallow &
 $HOME/.config/bspwm/caps.sh &
 setxkbmap -option grp:alt_shift_toggle fr,ara &
 nm-applet &
@@ -46,3 +47,4 @@ bspc rule -a mpv state=tiled
 bspc rule -a Zathura state=tiled
 bspc rule -a Screenkey manage=off
 bspc rule -a guvcview state=floating rectangle=480x270+1440+810 sticky=on layer=above
+bspc rule -a Print state=floating
