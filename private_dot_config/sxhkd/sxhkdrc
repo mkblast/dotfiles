@@ -80,7 +80,7 @@ super + ctrl + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,ex
 
 # Expand/contract a window by moving one of its side outward/inward
 super +  @space : {h,j,k,l}
-    STEP=20; SELECTION={1,2,3,4}; \
+    STEP=50; SELECTION={1,2,3,4}; \
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
     bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
@@ -139,10 +139,11 @@ XF86MonBrightnessUp
 super + Return
 	alacritty
 
+super + e
+    alacritty -e lf
+
 super + d
     rofi -show drun -sorting-method fzf -sort
 
 super + shift + d
     rofi -show window -sorting-method fzf -sort
-super + e
-    alacritty -e lf
