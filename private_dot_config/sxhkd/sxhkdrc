@@ -43,6 +43,7 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+
 # focus the node in monocle layout 
 super + ctrl + {j, k}
     bspc node -f {next, prev}.local
@@ -60,7 +61,7 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
+super + {a,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
