@@ -12,7 +12,7 @@
     text-color:                 #ECEFF4;
     height:                     25px;
     font:                       "Jebrains Mono 9";
-    prompt-font:                "Ubuntu Bold 9";
+    prompt-font:                "Jebrains Mono 9";
     prompt-background:          #5E81AC;
     prompt-foreground:          #ECEFF4;
     prompt-padding:             5px;
