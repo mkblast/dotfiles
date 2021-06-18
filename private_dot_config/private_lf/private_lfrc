@@ -6,12 +6,12 @@ set icons true
 set ignorecase true
 
 # Custom Functions
-# cmd open ${{
-#     case $(file --mime-type "$f" -bL) in
-#         text/*|application/json) $EDITOR "$f";;
-#         *) xdg-open "$f" ;;
-#     esac
-# }}
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
 
 cmd mkdir ${{
   printf "Directory Name: "
