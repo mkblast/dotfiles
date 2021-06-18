@@ -6,12 +6,12 @@ set icons true
 set ignorecase true
 
 # Custom Functions
-cmd open ${{
-    case $(file --mime-type "$f" -bL) in
-        text/*|application/json) $EDITOR "$f";;
-        *) xdg-open "$f" ;;
-    esac
-}}
+# cmd open ${{
+#     case $(file --mime-type "$f" -bL) in
+#         text/*|application/json) $EDITOR "$f";;
+#         *) xdg-open "$f" ;;
+#     esac
+# }}
 
 cmd mkdir ${{
   printf "Directory Name: "
@@ -140,6 +140,8 @@ map gus cd /run/media/
 
 map gd cd ~/Downloads
 
+map gd cd ~/Documents
+
 map gv. cd ~/Videos
 map gva cd ~/Videos/anime
 
@@ -149,9 +151,13 @@ map gca cd ~/.config/alacritty
 map gcc cd ~/.config
 map gcn cd ~/.config/nvim
 map gcl cd ~/.config/lf
+map gcb cd ~/.config/bspwm
+map gcs cd ~/.config/sxhkd
+map gcp cd ~/.config/polybar
+
 map gC cd ~/Files/code
 map gl cd ~/.local
-map gE cd /etc
+map ge cd /etc
 map gU. cd /usr
 map gUs cd /usr/share
 
