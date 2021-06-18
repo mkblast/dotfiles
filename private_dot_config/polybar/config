@@ -115,35 +115,29 @@ label-muted-foreground = ${colors.foregroundr)
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-click-right = pavucontrol
 
 [module/xkeyboard]
 type = internal/xkeyboard
 label-layout = %icon%
 layout-icon-0 = fr; FR
 layout-icon-1 = ara; AR
-; List of indicators to ignore
 blacklist-0 = num lock
 blacklist-1 = scroll lock
 blacklist-2 = caps lock
 
 [module/title]
 type = internal/xwindow
+label-maxlen = 70
 
 [module/memory]
 type = internal/memory
 label =  %gb_used%
-
-; Seconds to sleep between updates
-; Default: 1
 interval = 5
 
 [module/cpu]
 type = internal/cpu
 label = %percentage%%
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
+interval = 1
 
 ; [module/wifi]
 ; type = custom/script
