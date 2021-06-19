@@ -1,15 +1,21 @@
 #! /bin/sh
 
 ###---Autostart---###
+# Start sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
+# Start polybar
+$HOME/.config/bspwm/launch.sh &
+# Start bspswallow
 pgrep bspswallow || bspswallow &
+# Change capslock
 $HOME/.config/bspwm/caps.sh &
+# Set keyboard layout to fr and ara
 setxkbmap -option grp:alt_shift_toggle fr,ara &
+# Start other programes
 nm-applet &
 nitrogen --restore &
 picom  &
 lxsession &
-$HOME/.config/bspwm/launch.sh &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9
 
