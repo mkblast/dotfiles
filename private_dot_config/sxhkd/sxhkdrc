@@ -71,11 +71,11 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+super + {_,shift + }{ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla}
 	bspc {desktop -f,node -d} focused:'^{1-9,10}'
 
 # Send window to desktop and focus on it
-super + ctrl + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+super + ctrl + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla}
     id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
 
 # Expand/contract a window by moving one of its side outward/inward
