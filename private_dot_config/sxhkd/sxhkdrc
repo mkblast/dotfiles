@@ -34,8 +34,8 @@ super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+super + ctrl + {m,x,y,u,z}
+	bspc node -g {marked,locked,sticky,private,urgent}
 
 
 # FOCUS/SWAP
@@ -147,3 +147,16 @@ super + d
 
 super + shift + d
     rofi -show file-browser -sorting-method fzf -sort
+
+# MPD
+super + F1
+    mpc toggle
+
+super + F2
+    mpc stop
+
+super + {F3,F4}
+    mpc {next,prev}
+
+super + {F5,F6}
+    mpc {volume +5,volume -5}
