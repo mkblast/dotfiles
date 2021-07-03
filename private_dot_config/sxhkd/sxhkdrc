@@ -2,7 +2,7 @@
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+    pgrep -x sxhkd > /dev/null || sxhkd &
 
 # BSPWM HOTKEYS
 
@@ -141,6 +141,9 @@ super + Return
 
 super + e
     alacritty -e lf
+
+super + alt + m
+    alacritty -e ncmpcpp
 
 super + d
     rofi -show drun -sorting-method fzf -sort
