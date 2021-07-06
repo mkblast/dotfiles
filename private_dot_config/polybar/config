@@ -1,11 +1,11 @@
 [colors]
-background = #2E3440
-background-wm = #5E81AC
-background-alt = #3B4252
-foreground = #ECEFF4
-foreground-alt = #E5E9F0
-primary = #88C0D0
-alert = #BF616A
+background = #1e1e1e
+background-wm = #2b2b2b
+background-alt = #2b2b2b
+foreground = #d4d4d4
+foreground-alt = #d4d4d4
+primary = #9cdcfe
+alert = #f44747
 
 [settings]
 format-foreground =
@@ -57,7 +57,7 @@ modules-right = xkeyboard volume memory cpu date
 
 tray-position = right
 tray-padding = 1
-tray-background = ${colors.background-alt}
+tray-background = ${colors.background}
 tray-offset-x = 0
 tray-offset-y = 0
 tray-scale = 1.0
