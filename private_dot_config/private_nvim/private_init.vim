@@ -29,11 +29,11 @@ let mapleader = " "
 " Let List Some Plugins Here
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'arcticicestudio/nord-vim'                               "Nord colorscheme
+Plug 'tomasiser/vim-code-dark'
 Plug 'jiangmiao/auto-pairs'                                 
 Plug 'tpope/vim-surround'
-Plug 'ptzz/lf.vim'                                            "Lf intergration
-Plug 'voldikss/vim-floaterm'                                  "A floating terminal
+Plug 'ptzz/lf.vim'                                            
+Plug 'voldikss/vim-floaterm'                                 
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -42,11 +42,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
-" Nooooord
-" colorscheme nord
-colorscheme nord
-let g:airline_theme='nord'
-" Transparency
+" colorscheme codedark
+colorscheme codedark
+let g:airline_theme='codedark'
 hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
