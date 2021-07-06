@@ -47,7 +47,7 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 3
-    y: 3
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -179,37 +179,6 @@ font:
 
 
 colors:
-schemes:
-  codelight: &light
-    primary:
-      background: '#ffffff'
-      foreground: '#1e1e1e'
-
-    cursor:
-      text: '#d4d4d4'
-      cursor: '#d4d4d4'
-
-    normal:
-      black:   '#1e1e1e'
-      red:     '#c72e0f'
-      green:   '#009000'
-      yellow:  '#795e25'
-      blue:    '#007acc'
-      magenta: '#af00db'
-      cyan:    '#56b6c2'
-      white:   '#d4d4d4'
-
-    bright:
-      black:   '#1e1e1e'
-      red:     '#c72e0f'
-      green:   '#009000'
-      yellow:  '#795e25'
-      blue:    '#007acc'
-      magenta: '#af00db'
-      cyan:    '#56b6c2'
-      white:   '#d4d4d4'
-
-  codedark: &dark
 
     primary:
       background: '#1e1e1e'
@@ -218,6 +187,14 @@ schemes:
     cursor:
       text: '#d4d4d4'
       cursor: '#d4d4d4'
+
+    vi_mode_cursor:
+      text: '#1e1e1e'
+      cursor: '#d4d4d4'
+
+    selection:
+      text: '#191919'
+      background: '#d8dee9'
 
     normal:
       black:   '#1e1e1e'
@@ -239,7 +216,15 @@ schemes:
       cyan:    '#56b6c2'
       white:   '#d4d4d4'
 
-colors: *dark
+    dim:
+      black:   '#1C1C1C'
+      red:     '#9C2D2D'
+      green:   '#4F5C48'
+      yellow:  '#999976'
+      blue:    '#3B6C94'
+      magenta: '#635263'
+      cyan:    '#5D7F8C'
+      white:   '#9E9E9E'
 
   # Indexed Colors
   #
