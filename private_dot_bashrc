@@ -2,7 +2,6 @@
 # ~/.bashrc
 
 #
-neofetch
 
 [[ $- != *i* ]] && return
 
