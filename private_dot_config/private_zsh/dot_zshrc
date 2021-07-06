@@ -15,8 +15,6 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
-
 # Change cursor shape for different vi modes.
 function zle-keymap-select () {
     case $KEYMAP in
