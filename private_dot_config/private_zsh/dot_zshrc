@@ -75,7 +75,8 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Extras
+# My aliases
 source ~/.config/zsh/aliases/aliases.zsh
 
-# GO git fast-syntax-highlighting plugin
+# GO get fast-syntax-highlighting plugin
 source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
