@@ -88,7 +88,6 @@ cmd restore_trash ${{
 # Remove some defaults
 map m
 map o
-map n
 map "'"
 map '"'
 map d
