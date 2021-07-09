@@ -1,8 +1,8 @@
 # Lines configured by zsh-newuser-install
 
-HISTFILE=~/.config/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.cache/zsh/history
+HISTSIZE=100000000
+SAVEHIST=100000000
 
 bindkey -v
 export KEYTIMEOUT=1
@@ -30,6 +30,14 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+# use the vi navigation keys in menu completion
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
 
 
 # Use lf to switch directories and bind it to ctrl-o
