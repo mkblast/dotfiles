@@ -1,4 +1,5 @@
-# Lines configured by zsh-newuser-install
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 
 HISTFILE=~/.cache/zsh/history
 HISTSIZE=100000000
@@ -31,8 +32,6 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-zstyle ':completion:*' menu select
-zmodload zsh/complist
 # use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
