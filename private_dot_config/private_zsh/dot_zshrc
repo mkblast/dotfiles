@@ -75,13 +75,13 @@ ex ()
   fi
 }
 
-eval "$(starship init zsh)"
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Extras
+# Starship prompt
+eval "$(starship init zsh)"
 # My aliases
 source ~/.config/zsh/aliases/aliases.zsh
 
