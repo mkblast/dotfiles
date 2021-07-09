@@ -5,12 +5,10 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 # Start polybar
 $HOME/.config/bspwm/launch.sh &
-# Start bspswallow
-pgrep bspswallow || bspswallow &
 # Change capslock
 setxkbmap -option caps:swapescape
 # Set keyboard layout to fr and ara
-setxkbmap -option grp:alt_shift_toggle fr,ara &
+setxkbmap -option grp:alt_shift_toggle fr,ara
 # Start other programes
 nm-applet &
 nitrogen --restore &
