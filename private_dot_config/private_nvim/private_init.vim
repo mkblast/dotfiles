@@ -1,5 +1,4 @@
 " Some Basic Options
- 
 set clipboard=unnamedplus
 set mouse=nv
 set noshowmode
@@ -20,14 +19,13 @@ set smartcase
 set ignorecase
 set formatoptions-=cro 
 set updatetime=50
-" Cursor line
+set splitbelow splitright
 set cursorline
 set cursorcolumn
 
 let mapleader = " "
 
 " Let List Some Plugins Here
-
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tomasiser/vim-code-dark'
 Plug 'jiangmiao/auto-pairs'                                 
@@ -48,7 +46,6 @@ let g:airline_theme='codedark'
 hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
-
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#enabled = 1
 function! MyLineNumber()
@@ -90,8 +87,8 @@ nnoremap <leader>wh :hide<CR>
 nmap <leader>gs :G<CR>
 
 " Lf Plugin Options
+nmap <leader>f :Lf<CR>
 let g:lf_width = 120
 let g:lf_height = 35
 let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 let g:lf_map_keys = 0
-nmap <leader>f :Lf<CR>
