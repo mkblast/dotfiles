@@ -50,4 +50,5 @@ bspc config window_gap 10
 ###---Rules---###
 bspc rule -a mpv state=fullscreen
 bspc rule -a Zathura state=tiled
+bspc rule -a Emacs state=tiled
 bspc rule -a Screenkey manage=off
