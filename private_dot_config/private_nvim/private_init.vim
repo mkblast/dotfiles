@@ -46,20 +46,20 @@ let g:airline_theme='codedark'
 hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#enabled = 1
-function! MyLineNumber()
-  return substitute(line('.'), '\d\@<=\(\(\d\{3\}\)\+\)$', ',&', 'g'). ' | '.
-    \    substitute(line('$'), '\d\@<=\(\(\d\{3\}\)\+\)$', ',&', 'g')
-endfunction
+" function! MyLineNumber()
+"   return substitute(line('.'),'\d\@<=\(\(\d\{3\}\)\+\)$',',&','g').'/'.
+"     \    substitute(line('$'),'\d\@<=\(\(\d\{3\}\)\+\)$',',&','g')
+" endfunction
 
-call airline#parts#define('linenr', {'function': 'MyLineNumber', 'accents': 'bold'})
-let g:airline_section_z = airline#section#create(['%3p%%: ', 'linenr', ':%3v'])
+" call airline#parts#define('linenr', {'function':'MyLineNumber','accents':'bold'})
+" let g:airline_section_z = airline#section#create(['%3p%%:','linenr',':%3v'])
 
 " Gitgutter
 let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
-
 
 "Some Maps
 
@@ -90,5 +90,5 @@ nmap <leader>gs :G<CR>
 nmap <leader>f :Lf<CR>
 let g:lf_width = 120
 let g:lf_height = 35
-let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
+let g:lf_replace_netrw = 1
 let g:lf_map_keys = 0
