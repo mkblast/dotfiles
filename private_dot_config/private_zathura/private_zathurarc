@@ -16,34 +16,46 @@ set show-scrollbars     false
 
 # CODEDARK THEME
 # ----------
-set default-bg              "#1e1e1e" 
-set default-fg              "#d4d4d4" 
-set statusbar-bg            "#1e1e1e" 
-set statusbar-fg            "#d4d4d4" 
-set inputbar-bg             "#1e1e1e" 
-set inputbar-fg             "#608b4e" 
-set completion-bg           "#1e1e1e" 
-set completion-fg           "#d4d4d4" 
-set completion-group-bg     "#1e1e1e" 
-set completion-group-fg     "#d4d4d4" 
-set completion-highlight-bg "#2b2b2b" 
-set completion-highlight-fg "#d4d4d4" 
-set notification-bg         "#2b2b2b" 
-set notification-fg         "#eceff4" 
-set notification-error-bg   "#f44747" 
-set notification-error-fg   "#eceff4" 
-set notification-warning-bg "#d7ba7d" 
-set notification-warning-fg "#1e1e1e" 
-set highlight-color         "#569cd6" 
-set highlight-active-color  "#9cdcfe" 
-set index-bg                "#1e1e1e" 
-set index-fg                "#d4d4d4" 
-set index-active-bg         "#2b2b2b" 
-set index-active-fg         "#d4d4d4" 
-set recolor-darkcolor       "#d4d4d4" 
-set recolor-lightcolor      "#1e1e1e" 
-set render-loading-bg       "#1e1e1e" 
-set render-loading-fg       "#d4d4d4" 
+set notification-error-bg       "#282828" # bg
+set notification-error-fg       "#fb4934" # bright:red
+set notification-warning-bg     "#282828" # bg
+set notification-warning-fg     "#fabd2f" # bright:yellow
+set notification-bg             "#282828" # bg
+set notification-fg             "#b8bb26" # bright:green
+
+set completion-bg               "#504945" # bg2
+set completion-fg               "#ebdbb2" # fg
+set completion-group-bg         "#3c3836" # bg1
+set completion-group-fg         "#928374" # gray
+set completion-highlight-bg     "#83a598" # bright:blue
+set completion-highlight-fg     "#504945" # bg2
+
+# Define the color in index mode
+set index-bg                    "#504945" # bg2
+set index-fg                    "#ebdbb2" # fg
+set index-active-bg             "#83a598" # bright:blue
+set index-active-fg             "#504945" # bg2
+
+set inputbar-bg                 "#282828" # bg
+set inputbar-fg                 "#ebdbb2" # fg
+
+set statusbar-bg                "#504945" # bg2
+set statusbar-fg                "#ebdbb2" # fg
+
+set highlight-color             "#fabd2f" # bright:yellow
+set highlight-active-color      "#fe8019" # bright:orange
+
+set default-bg                  "#282828" # bg
+set default-fg                  "#ebdbb2" # fg
+set render-loading              true
+set render-loading-bg           "#282828" # bg
+set render-loading-fg           "#ebdbb2" # fg
+
+# Recolor book content's color
+set recolor-lightcolor          "#282828" # bg
+set recolor-darkcolor           "#ebdbb2" # fg
+set recolor                     "true"
+# set recolor-keephue             true      # keep original color
 
 #mapping normal mode
 map d scroll half-down
