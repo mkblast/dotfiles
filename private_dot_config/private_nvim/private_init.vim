@@ -38,11 +38,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " colorscheme codedark
-colorscheme codedark
-let g:airline_theme='codedark'
+autocmd vimenter * ++nested colorscheme gruvbox
+let g:airline_theme='gruvbox'
 hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
