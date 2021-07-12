@@ -47,16 +47,15 @@ let g:airline_theme='gruvbox'
 hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#enabled = 1
-" function! MyLineNumber()
-"   return substitute(line('.'),'\d\@<=\(\(\d\{3\}\)\+\)$',',&','g').'/'.
-"     \    substitute(line('$'),'\d\@<=\(\(\d\{3\}\)\+\)$',',&','g')
-" endfunction
+function! MyLineNumber()
+  return substitute(line('.'),'\d\@<=\(\(\d\{3\}\)\+\)$',',&','g').'/'.
+    \    substitute(line('$'),'\d\@<=\(\(\d\{3\}\)\+\)$',',&','g')
+endfunction
 
-" call airline#parts#define('linenr', {'function':'MyLineNumber','accents':'bold'})
-" let g:airline_section_z = airline#section#create(['%3p%%:','linenr',':%3v'])
+call airline#parts#define('linenr', {'function':'MyLineNumber','accents':'bold'})
+let g:airline_section_z = airline#section#create(['%3p%%:','linenr',':%3v'])
 
 " Gitgutter
 let g:gitgutter_enabled = 1
