@@ -29,6 +29,7 @@ let mapleader = " "
 
 " Let List Some Plugins Here
 call plug#begin('~/.config/nvim/plugged')
+Plug 'gruvbox-community/gruvbox'
 Plug 'jiangmiao/auto-pairs'                                 
 Plug 'tpope/vim-surround'
 Plug 'ptzz/lf.vim'                                            
@@ -44,8 +45,9 @@ Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " Colorscheme
-colorscheme onedark
-let g:airline_theme='onedark'
+let g:gruvbox_sign_column = 'bg0'
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
 hi Normal guibg=NONE ctermbg=NONE
 
 " Airline
