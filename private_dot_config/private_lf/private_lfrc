@@ -142,10 +142,10 @@ map gd cd ~/Downloads
 
 map gd cd ~/Documents
 
-map gv. cd ~/Videos
+map gv<space> cd ~/Videos
 map gva cd ~/Videos/anime
 
-map gcc cd ~/.config
+map gc<space> cd ~/.config
 map gca cd ~/.config/alacritty
 map gcn cd ~/.config/nvim
 map gcl cd ~/.config/lf
@@ -154,11 +154,11 @@ map gcs cd ~/.config/sxhkd
 map gcp cd ~/.config/polybar
 map gcq cd ~/.config/qtile
 
-map gf cd ~/Files
+map gf<space> cd ~/Files
 map gfc cd ~/Files/code
 
 map gl cd ~/.local
 
 map ge cd /etc
-map gU. cd /usr
+map gU<space> cd /usr
 map gUs cd /usr/share
