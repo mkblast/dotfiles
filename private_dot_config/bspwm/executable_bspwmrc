@@ -9,6 +9,8 @@ $HOME/.config/bspwm/launch.sh &
 setxkbmap -option caps:swapescape
 # Set keyboard layout to fr and ara
 setxkbmap -option grp:alt_shift_toggle fr,ara
+# Swallow terminals
+pgrep bspswallow || bspswallow &
 # Start other programes
 nm-applet &
 nitrogen --restore &
